@@ -1,0 +1,170 @@
+#container {
+    margin: 0;
+    padding: 0;
+}
+
+#view {
+
+    /*border: 1px solid red;*/
+    width: 96px;
+    height: 96px;
+    margin: 200px auto 0 auto;
+}
+
+#cube {
+    /*动画*/
+    -webkit-animation-name: animation;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 3s;
+    /*旋转基准点*/
+    -webkit-transform-origin: 80px 80px 0;
+
+    -moz-animation-name: animation;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-duration: 3s;
+    /*旋转基准点*/
+    -moz-transform-origin: 80px 80px 0;
+
+    animation-name: animation;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    /*旋转基准点*/
+    transform-origin: 80px 80px 0;
+    /*end 动画*/
+
+    width: 96px;
+    height: 96px;
+    /*开启3D*/
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    /*end 开启3D*/
+    /*基准点*/
+    /*perspective: 138px;*/
+    /*-webkit-perspective: 138px;*/
+    /*end 基准点*/
+    /*-webkit-perspective-origin: 25% 75%;*/
+    /*transform-origin: 100px;*/
+
+}
+
+.item {
+    width: 30px;
+    height: 30px;
+
+    margin: 1px;
+    float: left;
+    border-radius: 5px;
+}
+
+.common {
+    width: 96px;
+    height: 96px;
+    position: absolute;
+}
+
+#red div {
+    background-color: red;
+}
+
+#green div {
+    background-color: green;
+}
+
+#blue div {
+    background-color: blue;
+}
+
+#yellow div {
+    background-color: yellow;
+}
+
+#black div {
+    background-color: black;
+}
+
+#orange div {
+    background-color: orange;
+}
+
+#red {
+    -webkit-transform: translateZ(48px);
+    -moz-transform: translateZ(48px);
+    transform: translateZ(48px);
+}
+
+#green {
+
+    transform: rotateX(90deg) translateZ(48px);
+    -moz-transform: rotateX(90deg) translateZ(48px);
+    -webkit-transform: rotateX(90deg) translateZ(48px);
+}
+
+#blue {
+    transform: translateZ(-48px);
+    -moz-transform: translateZ(-48px);
+    -webkit-transform: translateZ(-48px);
+}
+
+#yellow {
+    transform: rotateX(-90deg) translateZ(48px);
+    -moz-transform: rotateX(-90deg) translateZ(48px);
+    -webkit-transform: rotateX(-90deg) translateZ(48px);
+}
+
+#orange {
+    transform: rotateY(-90deg) translateZ(48px);
+    -moz-transform: rotateY(-90deg) translateZ(48px);
+    -webkit-transform: rotateY(-90deg) translateZ(48px);
+}
+
+#black {
+    transform: rotateY(90deg) translateZ(48px);
+    -moz-transform: rotateY(90deg) translateZ(48px);
+    -webkit-transform: rotateY(90deg) translateZ(48px);
+}
+
+/*旋转动画*/
+@-webkit-keyframes animation {
+    from, to {
+    }
+    16% {
+        -webkit-transform:translateX(100px) rotateY(-90deg);
+    }
+    33% {
+        -webkit-transform:translateX(200px) rotateY(-90deg) rotateZ(135deg);
+    }
+    50% {
+        -webkit-transform: rotateY(225deg) rotateZ(135deg);
+    }
+    66% {
+        -webkit-transform: rotateY(135deg) rotateZ(135deg);
+    }
+    83% {
+        -webkit-transform: rotateY(135deg);
+
+    }
+}
+
+/*旋转动画*/
+@-moz-keyframes animation {
+    from, to {
+    }
+    16% {
+        -moz-transform:translateX(100px) rotateY(-90deg);
+    }
+    33% {
+        -moz-transform:translateX(200px) rotateY(-90deg) rotateZ(135deg);
+    }
+    50% {
+        -moz-transform: rotateY(225deg) rotateZ(135deg);
+    }
+    66% {
+        -moz-transform: rotateY(135deg) rotateZ(135deg);
+    }
+    83% {
+        -moz-transform: rotateY(135deg);
+    }
+}
